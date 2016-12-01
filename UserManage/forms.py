@@ -137,6 +137,7 @@ class EditUserForm(forms.ModelForm):
 class PermissionListForm(forms.ModelForm):
     class Meta:
         model = PermissionList
+        fields = '__all__'
         widgets = {
             'name' : forms.TextInput(attrs={'class':'form-control'}),
             'url' : forms.TextInput(attrs={'class':'form-control'}),
@@ -152,6 +153,7 @@ class PermissionListForm(forms.ModelForm):
 class RoleListForm(forms.ModelForm):
     class Meta:
         model = RoleList
+        fields = '__all__'
         widgets = {
             'name' : forms.TextInput(attrs={'class':'form-control'}),
             'permission' : forms.SelectMultiple(attrs={'class':'form-control','size':'10','multiple':'multiple'}),
